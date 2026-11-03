@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Connexion · Forge · Gobelin Hurlant</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="gobelin.css">
+  <link rel="icon" href="icone.svg" type="image/svg+xml">
+  <style>
+    /* styles du login, posés avec les variables du site pour rester dans le ton */
+    .forge { max-width: 26rem; margin: 3rem auto; }
+    .forge .panneau {
+      background: var(--relief);
+      border: 1px solid var(--trait);
+      border-radius: 12px;
+      box-shadow: var(--ombre);
+      padding: 1.6rem 1.5rem 1.75rem;
+    }
+    .forge .tag { display: inline-block; font-family: var(--code); font-size: 0.78rem;
+      color: var(--nuit); background: var(--morve); padding: 0.15rem 0.5rem; border-radius: 6px; }
+    .forge h1 { font-size: 1.6rem; margin: 0.9rem 0 0.3rem; }
+    .forge .sous { color: var(--mousse); font-size: 0.95rem; margin: 0 0 1.4rem; }
+    .forge label { display: block; font-size: 0.9rem; color: var(--mousse); margin: 0 0 0.35rem; }
+    .forge .bloc { margin: 0 0 1.1rem; }
+    .forge input {
+      width: 100%; padding: 0.7rem 0.8rem; border-radius: 8px;
+      background: var(--paroi); border: 1px solid var(--trait); color: var(--os);
+      font: inherit;
+    }
+    .forge input:focus { outline: 2px solid var(--morve); outline-offset: 2px; border-color: var(--morve); }
+    .forge button {
+      width: 100%; padding: 0.75rem 1rem; border: 0; border-radius: 8px; cursor: pointer;
+      background: var(--morve); color: var(--nuit); font-weight: 800; font-size: 1rem;
+    }
+    .forge button:hover { filter: brightness(1.07); }
+    .forge .erreur {
+      display: none; margin: 0 0 1.1rem; padding: 0.65rem 0.8rem; border-radius: 8px;
+      background: rgb(255 140 196 / 0.12); border: 1px solid var(--hurle); color: var(--hurle);
+      font-size: 0.9rem;
+    }
+    .forge .pied { margin: 1.1rem 0 0; color: var(--mousse); font-size: 0.82rem; }
+  </style>
+</head>
+<body>
+  <header class="haut">
+    <div class="haut-dedans">
+      <a class="marque" href="https://javakhanstudio.github.io/Entreprises_Fictives/gobelin/index.html"><img src="logo.svg" alt="" width="44" height="44"><span>Gobelin Hurlant</span></a>
+      <nav class="menu" aria-label="Menu du site">
+        <a href="https://javakhanstudio.github.io/Entreprises_Fictives/gobelin/index.html">Accueil</a>
+        <a href="https://javakhanstudio.github.io/Entreprises_Fictives/gobelin/a-propos.html">Le studio</a>
+        <a href="https://javakhanstudio.github.io/Entreprises_Fictives/gobelin/equipe.html">La horde</a>
+        <a href="https://javakhanstudio.github.io/Entreprises_Fictives/gobelin/organigramme.html">Organigramme</a>
+        <a href="https://javakhanstudio.github.io/Entreprises_Fictives/gobelin/offre-emploi.html">On recrute</a>
+        <a href="https://javakhanstudio.github.io/Entreprises_Fictives/gobelin/communique.html">Presse</a>
+        <a href="https://javakhanstudio.github.io/Entreprises_Fictives/gobelin/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="forge">
+      <div class="panneau">
+        <span class="tag">forge.gobelin-hurlant.example</span>
+        <h1>Connexion à la Forge</h1>
+        <p class="sous">Vérification d'accès avant le build du jalon du vendredi 13 novembre.</p>
+
+        <div class="erreur" id="erreur">Identifiants incorrects. Vérifiez votre identifiant et votre mot de passe, puis réessayez.</div>
+
+        <form id="form" autocomplete="off">
+          <div class="bloc">
+            <label for="id">Identifiant</label>
+            <input type="text" id="id" name="id" placeholder="prenom" required>
+          </div>
+          <div class="bloc">
+            <label for="mdp">Mot de passe</label>
+            <input type="password" id="mdp" name="mdp" required>
+          </div>
+          <button type="submit">Se connecter</button>
+        </form>
+
+        <p class="pied">Accès réservé à la horde. En cas de souci, contactez Ingrid.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-fictif">
+    <p><strong>Site fictif à but pédagogique.</strong> Les entreprises, les employés et les domaines présentés ici n'existent pas : toute ressemblance avec une entreprise ou une personne réelle serait fortuite. Ce site ne collecte rien.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
