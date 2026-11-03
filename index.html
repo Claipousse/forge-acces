@@ -10,37 +10,37 @@
   <link rel="icon" href="icone.svg" type="image/svg+xml">
   <style>
     /* styles du login, posés avec les variables du site pour rester dans le ton */
-    .forge { max-width: 26rem; margin: 3rem auto; }
+    .forge { max-width: 34rem; margin: 4.5rem auto; }
     .forge .panneau {
       background: var(--relief);
       border: 1px solid var(--trait);
-      border-radius: 12px;
+      border-radius: 14px;
       box-shadow: var(--ombre);
-      padding: 1.6rem 1.5rem 1.75rem;
+      padding: 2.4rem 2.4rem 2.6rem;
     }
-    .forge .tag { display: inline-block; font-family: var(--code); font-size: 0.78rem;
-      color: var(--nuit); background: var(--morve); padding: 0.15rem 0.5rem; border-radius: 6px; }
-    .forge h1 { font-size: 1.6rem; margin: 0.9rem 0 0.3rem; }
-    .forge .sous { color: var(--mousse); font-size: 0.95rem; margin: 0 0 1.4rem; }
-    .forge label { display: block; font-size: 0.9rem; color: var(--mousse); margin: 0 0 0.35rem; }
-    .forge .bloc { margin: 0 0 1.1rem; }
+    .forge .tag { display: inline-block; font-family: var(--code); font-size: 0.9rem;
+      color: var(--nuit); background: var(--morve); padding: 0.25rem 0.65rem; border-radius: 6px; }
+    .forge h1 { font-size: 2.1rem; margin: 1.1rem 0 0.4rem; }
+    .forge .sous { color: var(--mousse); font-size: 1.1rem; margin: 0 0 2rem; }
+    .forge label { display: block; font-size: 1.05rem; color: var(--mousse); margin: 0 0 0.5rem; }
+    .forge .bloc { margin: 0 0 1.5rem; }
     .forge input {
-      width: 100%; padding: 0.7rem 0.8rem; border-radius: 8px;
+      width: 100%; padding: 1rem 1.1rem; border-radius: 10px;
       background: var(--paroi); border: 1px solid var(--trait); color: var(--os);
-      font: inherit;
+      font: inherit; font-size: 1.1rem;
     }
     .forge input:focus { outline: 2px solid var(--morve); outline-offset: 2px; border-color: var(--morve); }
     .forge button {
-      width: 100%; padding: 0.75rem 1rem; border: 0; border-radius: 8px; cursor: pointer;
-      background: var(--morve); color: var(--nuit); font-weight: 800; font-size: 1rem;
+      width: 100%; padding: 1.05rem 1rem; border: 0; border-radius: 10px; cursor: pointer;
+      background: var(--morve); color: var(--nuit); font-weight: 800; font-size: 1.2rem;
     }
     .forge button:hover { filter: brightness(1.07); }
     .forge .erreur {
-      display: none; margin: 0 0 1.1rem; padding: 0.65rem 0.8rem; border-radius: 8px;
+      display: none; margin: 0 0 1.5rem; padding: 0.85rem 1rem; border-radius: 10px;
       background: rgb(255 140 196 / 0.12); border: 1px solid var(--hurle); color: var(--hurle);
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
-    .forge .pied { margin: 1.1rem 0 0; color: var(--mousse); font-size: 0.82rem; }
+    .forge .pied { margin: 1.5rem 0 0; color: var(--mousse); font-size: 0.95rem; }
   </style>
 </head>
 <body>
@@ -64,14 +64,13 @@
       <div class="panneau">
         <span class="tag">forge.gobelin-hurlant.example</span>
         <h1>Connexion à la Forge</h1>
-        <p class="sous">Vérification d'accès avant le build du jalon du vendredi 13 novembre.</p>
 
         <div class="erreur" id="erreur">Identifiants incorrects. Vérifiez votre identifiant et votre mot de passe, puis réessayez.</div>
 
         <form id="form" autocomplete="off">
           <div class="bloc">
             <label for="id">Identifiant</label>
-            <input type="text" id="id" name="id" placeholder="prenom" required>
+            <input type="text" id="id" name="id" required>
           </div>
           <div class="bloc">
             <label for="mdp">Mot de passe</label>
@@ -84,10 +83,6 @@
       </div>
     </section>
   </main>
-
-  <footer class="site-fictif">
-    <p><strong>Site fictif à but pédagogique.</strong> Les entreprises, les employés et les domaines présentés ici n'existent pas : toute ressemblance avec une entreprise ou une personne réelle serait fortuite. Ce site ne collecte rien.</p>
-  </footer>
 
   <script src="app.js"></script>
 </body>
