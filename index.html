@@ -35,11 +35,6 @@
       background: var(--morve); color: var(--nuit); font-weight: 800; font-size: 1.2rem;
     }
     .forge button:hover { filter: brightness(1.07); }
-    .forge .erreur {
-      display: none; margin: 0 0 1.5rem; padding: 0.85rem 1rem; border-radius: 10px;
-      background: rgb(255 140 196 / 0.12); border: 1px solid var(--hurle); color: var(--hurle);
-      font-size: 1rem;
-    }
     .forge .pied { margin: 1.5rem 0 0; color: var(--mousse); font-size: 0.95rem; }
   </style>
 </head>
@@ -64,8 +59,6 @@
       <div class="panneau">
         <span class="tag">forge.gobelin-hurlant.example</span>
         <h1>Connexion à la Forge</h1>
-
-        <div class="erreur" id="erreur">Identifiants incorrects. Vérifiez votre identifiant et votre mot de passe, puis réessayez.</div>
 
         <form id="form" autocomplete="off">
           <div class="bloc">
